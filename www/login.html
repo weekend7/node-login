@@ -8,7 +8,7 @@
 </head>
 <body>
   用户名: <input type="text" id="username"><br>
-  密码 : <input type="text" id="password"><br>
+  密码 : <input type="password" id="password"><br>
   <button id="login">登陆</button><br>
   <button id="reg">注册</button><br>
 
@@ -17,8 +17,8 @@
       $.ajax({
         url:"/login",
         data:{
-          username:$('username').val(),
-          username:$('#password').val()
+          username:$('#username').val(),
+          password:$('#password').val()
         },
         dataType:"json",
         success(res){
